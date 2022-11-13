@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ 
+  <PropertyGroup>
+
+    <TargetFrameworks>netstandard2.0;</TargetFrameworks>
+
+    <AssemblyVersion>1.0.0.17</AssemblyVersion>
+
+    <FileVersion>1.0.0.17</FileVersion>
+    
+  </PropertyGroup>
+ 
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\MovieLensRecommendationConfigurationPage.js" />
+    <EmbeddedResource Include="Configuration\MovieLensPluginSettingsConfigurationPage.html" />
+    <EmbeddedResource Include="Configuration\MovieLensPluginSettingsConfigurationPage.js" />
+    <EmbeddedResource Include="Configuration\MovieLensRecommendationConfigurationPage.html" />
+    <EmbeddedResource Include="ML_Net\DataSets\links.json" />
+    <EmbeddedResource Include="ML_Net\DataSets\test.csv" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.Core.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.CpuMath.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.Data.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.DataView.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.MachineLearning.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.KMeansClustering.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.PCA.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.Recommender.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.StandardTrainers.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Microsoft.ML.Transforms.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="ML_Net\Runtimes\libMatrixFactorizationNative_LinuxArm64.so" />
+    <EmbeddedResource Include="ML_Net\Runtimes\libMatrixFactorizationNative_LinuxArm.so" />
+    <EmbeddedResource Include="ML_Net\Runtimes\libMatrixFactorizationNative_Linux64.so" />
+    <EmbeddedResource Include="ML_Net\Runtimes\libMatrixFactorizationNative_OSXARM64.dylib" />
+    <EmbeddedResource Include="ML_Net\Runtimes\libMatrixFactorizationNative_OSX64.dylib" />
+    <EmbeddedResource Include="ML_Net\Runtimes\MatrixFactorizationNative_Win64.dll" />
+    <EmbeddedResource Include="ML_Net\Runtimes\MatrixFactorizationNative_Win86.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\System.CodeDom.dll" />
+    <EmbeddedResource Include="ML_Net\Libraries\System.Threading.Channels.dll" />
+    <EmbeddedResource Include="thumb.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="mediabrowser.server.core" Version="4.7.1" />
+    <PackageReference Include="Microsoft.ML.CpuMath" Version="1.7.1" />
+    <PackageReference Include="SkiaSharp" Version="2.80.2" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="Microsoft.ML" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.Recommender" Version="0.19.0" /> 
+    <PackageReference Include="SQLitePCL.pretty.core" Version="1.2.2" />
+  </ItemGroup>
+</Project>

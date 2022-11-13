@@ -1,0 +1,78 @@
+﻿<div data-role="page" class="page type-interior pluginConfigurationPage fullWidthContent" data-helpurl="" data-controller="__plugin/MovieLensPluginSettingsConfigurationPageJS">
+    <div class="content-primary">
+        <form>
+            <div class="verticalSection">
+
+                <div class="taskProgress hide">
+                    <div class="itemProgressBar"></div>
+                </div>
+
+                <h2 class="sectionTitle secondaryText">Training</h2>
+                <br />
+                <div class="inputContainer">
+                    <label class="inputLabel" for="txtNumTrainingIterations">Neural network training iterations:</label>
+                    <input is="emby-input" type="number" id="txtNumTrainingIterations" min="10" max="50" step="10" label="Neural network training iterations:" class="emby-input">
+                    <div class="fieldDescription checkboxFieldDescription">(Default: 20) Training iterations. Larger values will extend the task time.</div>
+                </div>
+
+                <div class="fieldDescription checkboxFieldDescription lastTrained"></div>
+
+                <br />
+
+                <button is="emby-button" type="submit" class="btnTraining raised block button-submit emby-button emby-button-backdropfilter raised-backdropfilter">
+                    <span>Train Recommendation Model</span>
+                </button>
+
+                <br />
+
+                <h2 class="sectionTitle secondaryText">Predictions</h2>
+
+                <br />
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input type="checkbox" is="emby-checkbox" id="chkEnableFavorRecentlyAdded" class="emby-checkbox">
+                        <span class="checkboxLabel">Favor recently added items</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">When recommending items, favor items from recently added.</div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label class="emby-checkbox-label">
+                        <input type="checkbox" is="emby-checkbox" id="chkEnableFavorNewReleases" class="emby-checkbox">
+                        <span class="checkboxLabel">Favor new releases</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">When recommending items, favor new release items.</div>
+                </div>
+
+                <div class="inputContainer">
+                    <label class="inputLabel" for="txtNumLastPlayedLimit">Items last played (months):</label>
+                    <input is="emby-input" type="number" id="txtNumLastPlayedLimit" min="2" max="8" step="1" label="Items last played:" class="emby-input">
+                    <div class="fieldDescription checkboxFieldDescription">(Default: 8) Ignore items that have been recently played within this values time-frame (months).</div>
+                </div>
+
+                <div class="inputContainer">
+                    <label class="inputLabel" for="txtNumRecommendationPredictionThreshold">Prediction Threshold:</label>
+                    <input is="emby-input" type="number" id="txtNumRecommendationPredictionThreshold" min="3.5" max="5.0" step="0.1" label="Prediction Threshold:" class="emby-input">
+                    <div class="fieldDescription checkboxFieldDescription">(Default: 3.5) Recommended items will score higher during matrix factorization prediction.</div>
+                </div>
+
+                <br />
+                
+                <div class="inputContainer">
+                    <label class="inputLabel" for="txtNumTrainingIterations">Maximum number of recommendation to return:</label>
+                    <input is="emby-input" type="number" id="txtNumPredictions" min="10" step="20" label="Number of recommendation to return:" class="emby-input">
+                    <div class="fieldDescription checkboxFieldDescription">Recommendations will return up to the maximum number. If left empty, all possible recommendations will return. </div>
+                </div>
+
+                <button is="emby-button" type="submit" class="btnPredictions raised block button-submit emby-button emby-button-backdropfilter raised-backdropfilter">
+                    <span>Recommendation Predictions</span>
+                </button>
+
+                <br />
+            </div>
+
+        </form>
+
+    </div>
+</div>
