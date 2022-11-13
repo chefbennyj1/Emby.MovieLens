@@ -14,7 +14,6 @@ namespace Emby.MovieLens.ML_Net
     // ReSharper disable once UnusedType.Global
     public class AssemblyManager : IServerEntryPoint
     {
-
         private static bool IsWindows() => RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
         private static bool IsMacOS() => RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
         private static bool IsLinux() => RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
